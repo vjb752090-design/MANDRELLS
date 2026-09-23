@@ -1,0 +1,7 @@
+{
+  "name": "Mandrell's Body & Paint Shop",
+  "description": "Precision auto body restoration, computerized OEM paint matching, and insurance collision claims in Pomona, CA with real-time order tracking and price estimation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

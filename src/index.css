@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-display: "Montserrat", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-gold-400: #facc15;
+  --color-gold-500: #eab308;
+  --color-gold-600: #ca8a04;
+  --color-shop-dark: #090d16;
+  --color-shop-card: #111726;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #090d16;
+  color: #f3f4f6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Glassmorphic panels */
+.glass-panel {
+  background: rgba(15, 22, 38, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-gold {
+  background: rgba(22, 19, 12, 0.92);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fef08a 0%, #facc15 40%, #ca8a04 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-btn {
+  background: linear-gradient(135deg, #facc15 0%, #eab308 50%, #ca8a04 100%);
+  color: #090d16;
+  font-weight: 700;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-btn:hover {
+  box-shadow: 0 0 24px rgba(250, 204, 21, 0.4);
+  transform: translateY(-1px);
+}
+
+.gold-btn:active {
+  transform: translateY(0);
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(110%) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.phone-toast-anim {
+  animation: slideInRight 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
